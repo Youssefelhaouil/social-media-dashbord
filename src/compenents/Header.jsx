@@ -10,7 +10,7 @@ export default function Header({isDark,toggleDark}){
             <div className="flex gap-x-3 items-center md:justify-between">
                 <h5 className="text-base font-normal font-sans text-dark-grayish-blue-text-light">Dark Mode</h5>
                 <button className={`relative  h-8 w-[60px] md:w-16  bg-toggle-light hover:bg-blue-500 rounded-full ${isDark?"bg-gradient-to-r from-toggle-dark-start to-toggle-dark-end":"" } `} onClick={toggleDark}>
-                    <span className={`absolute h-6 w-6 right-1 bottom-[4px]  rounded-full bg-white ${isDark ? "bg-very-dark-blue-bg-dark left-1 ":""} `}></span>
+                    <span className={`absolute h-6 w-6 right-1 bottom-[4px]  rounded-full  ${isDark ? "bg-very-dark-blue-bg-dark left-1 ":"bg-white"} `}></span>
                 </button>
             </div>
         </div>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from "./compenents/Header";
+import Overviews from "./compenents/Overviews";
+import Stats from "./compenents/Stats";
 
 function App() {
   const [isDark,setIsDark]= useState(false);
@@ -21,6 +23,9 @@ function App() {
   return (
     <>
     <Header isDark={isDark} toggleDark={toggleDark}></Header>
+    <Stats isDark={isDark}></Stats>
+    <Overviews isDark={isDark}></Overviews>
+  
      
     </>
   )
