@@ -39,7 +39,7 @@ export default function Stats({ isDark }) {
             }
         },
         {
-            platform: 'YouTube',
+            platform: 'Youtube',
             username: 'Nathan F.',
             subscribers: '8239',
             type: "SUBSCRIBERS",
@@ -47,21 +47,26 @@ export default function Stats({ isDark }) {
             logo: ytIcon,
             color: 'yt'
         }
+
     ];
+
 
     return (
         <>
-            <div className='pt-7 flex flex-row lg:flex-wrap justify-center items-center gap-6   '>
+            <div className='pt-7 z-10 flex flex-row lg:flex-wrap justify-center items-center gap-6   '>
                 {stats.map((stat, index) => (
                     <div
                         key={index}
-                        className={`relative h-[220px] w-full  rounded-md border-t-4 
+                        className={`relative h-[220px] w-full  rounded-md 
                         ${isDark ? "bg-dark-desaturated-blue-card-bg-dark hover:bg-gray-700" : "bg-light-grayish-blue-card-bg-light hover:bg-gray-300"}
-                        ${stat.platform === 'Instagram' ? ` ` 
-                            : ` border-t-4 border-t-${stat.color}`}
+                        ${stat.platform === 'Instagram' ? ` border-gradient-instagram` : ``}
+                        ${stat.platform === 'Facebook' ? `border-t-4 border-t-fb` : ``}
+                        ${stat.platform === 'Twitter' ? `border-t-4 border-t-tw` : ``}
+                        ${stat.platform === 'Youtube' ? `border-t-4 border-t-yt` : ``}
+
                         `}
                     >
-                        <span className={`flex justify-center pt-5 gap-x-2 font-sans font-bold font-base ${isDark ? "text-desaturated-blue-text-dark" : "text-dark-grayish-blue-text-light"} `}>
+                        <span className={`flex justify-center items-center pt-5 gap-x-2 font-sans font-bold font-base ${isDark ? "text-desaturated-blue-text-dark" : "text-dark-grayish-blue-text-light"} `}>
                             <img src={stat.logo} alt={`${stat.platform}-icon`} /> {stat.username}
                         </span>
                         <h1 className={`font-sans font-bold text-[50px] text-center pt-2 ${isDark ? "text-white" : ""}`}>{stat.followers || stat.subscribers}</h1>

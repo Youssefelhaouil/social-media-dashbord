@@ -61,9 +61,9 @@ export default function Overviews({ isDark }) {
     return (
         <>
             <h1 className={`font-sans font-bold text-[25px] pt-10 ${isDark ? "text-white" : "text-dark-grayish-blue-text-light"}`}>Overview-Today</h1>
-            <div className="w-full flex flex-wrap justify-center gap-6 md:flex md:flex-wrap md:justify-center md:items-center pt-6 ">
+            <div className="w-full grid grid-cols-4 grid-rows-2 gap-6 lg:flex lg:flex-wrap lg:justify-center lg:items-center pt-6 ">
                 {overviews.map((overview, index) => (
-                    <div key={index} className={`flex flex-col gap-8 px-6 py-2 h-[150px] w-[250px]  lg:w-full hover:bg-gray-300  rounded-md ${isDark ? "bg-dark-desaturated-blue-card-bg-dark hover:bg-gray-700" : "bg-light-grayish-blue-card-bg-light hover:bg-gray-300 "}`}>
+                    <div key={index} className={`flex flex-col gap-8 px-6 py-2 h-[150px] w-[240px]  lg:w-full hover:bg-gray-300  rounded-md ${isDark ? "bg-dark-desaturated-blue-card-bg-dark hover:bg-gray-700" : "bg-light-grayish-blue-card-bg-light hover:bg-gray-300 "}`}>
                         <span className={`flex justify-between items-center pt-5 gap-x-2 font-sans font-base ${isDark ? "text-desaturated-blue-text-dark" : ""}`}>
                             {overview.title} <img src={overview.logo} alt="facebook-icon" />
                         </span>
